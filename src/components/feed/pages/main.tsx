@@ -7,9 +7,9 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import Feed from "../components/feed";
 import Subscribes from "../components/subscribes";
 
-const Food = ({
+const Main = ({
   navigation,
-}: NativeStackScreenProps<RootStackParamList, "Food">) => {
+}: NativeStackScreenProps<RootStackParamList, "Main">) => {
   const [index, setIndex] = useState(0);
   const [routes] = useState([
     {
@@ -47,4 +47,4 @@ const Food = ({
     />
   );
 };
-export default Food;
+export default Main;

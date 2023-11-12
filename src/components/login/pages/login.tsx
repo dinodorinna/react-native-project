@@ -28,7 +28,7 @@ const Login = ({
   useEffect(() => {
     AsyncStorage.getItem("token").then((token) => {
       if (token) {
-        navigation.replace("Food");
+        navigation.replace("Main");
       }
     });
   }, []);
@@ -45,14 +45,14 @@ const Login = ({
         style={styles.input}
         onChangeText={setUsername}
         value={username}
-        placeholder="Enter your username."
+        placeholder="Enter your username"
       />
 
       <TextInput
         style={styles.input}
         onChangeText={setPassword}
         value={password}
-        placeholder="Enter your password."
+        placeholder="Enter your password"
       />
       <Button
         loading={loadingLogin}
@@ -74,7 +74,7 @@ const Login = ({
           if (data) {
             setErrorMessage("Login Success");
             setVisibleAlert(true);
-            navigation.replace("Food");
+            navigation.replace("Main");
             storeData(data?.token);
             axios.defaults.headers["Authorization"] = "Bearer " + data?.token;
           }
